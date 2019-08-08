@@ -1,31 +1,51 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./App.css";
 import Header from "./components/Header";
+import Basicdetail from "./components/BasicDetailsForm"
+import Dependantdetail from "./components/DependantForm"
+import Pictureuploaddetail from "./components/PictureUpload"
 import Landing from "./components/Landing";
 import Terms from "./components/Terms";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { Container, Row, Col } from "reactstrap";
 
 library.add(fab, fas);
 
 const App = () => (
-  <Fragment>
-    <Header />
-    <main className="my-5 py-5">
-    <Container className="pt-2 pt-md-3 w-100 px-4 position-relative">
-      <Row>
-        <Col xs={{ order: 2}} md={{ size: 7, order: 1}} className="py-5 mb-5 py-md-0 mb-md-0">
-          <Terms />
-        </Col>
-        <Col xs={{ order: 1}} md={{ size: 4, order: 1}} className="pb-5 mb-5 pb-md-0 mb-md-0 mx-auto mx-md-0">
-          <Landing />
-        </Col>
-      </Row>
-    </Container>
-    </main>
-  </Fragment>
+  <body className="js">
+   <Header />
+    <section class="home-area v3">
+        <div class="Modern-Slider">
+            <div class="item">
+                <div class="img-fill">
+                    <img src="assets/img/v3home.png" alt="jigsawlab" />
+                    <div class="info">
+                        <div class="container">
+                            <div class="row" style={{marginTop: "-26px"}}>
+
+                                <div class="col-sm-6 slider-content-area text-left">
+                                    <div class="v3 welcome-text">
+                                        <h1 style={{fontSize: "46px"}}>Day Kare Ambulance</h1>
+                                        <h2>Health Care Solutions</h2>
+                                        <h4>* By Filling the Membership Application, you agree to the terms and conditions of the membership application which can be found when you click on the button below.
+                                        </h4>
+                                        <a href="#openModal" tabindex="1" accesskey="1" class="read-more" id="link1"
+                                            onclick="document.getElementById('openModal').style.display='block';return true;">Read Terms & Conditions
+                                            </a>
+
+                                    </div>
+                                </div>
+                               <Basicdetail />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <Terms />
+  </body>
 );
 
 export default App;

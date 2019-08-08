@@ -19,8 +19,18 @@ class PictureUpload extends React.Component {
       facingMode: "user"
     };
     return (
-      <Container>
-        <Webcam
+
+
+      <div class="col-sm-6 v3-homeform" style={{paddingTop: "135px !important;"}}>
+      <div class="about-form">
+          <div class="form-title text-center">
+              <h2>Membership <span>Application </span> 2/4</h2>
+          </div>
+          <div class=" text-left">
+              <h2 style={{color: "wheat", fontSize: "16px", marginBottom: "7px" }}>Take a Picture</h2>
+          </div>
+          <div class="v2-about-input">
+          <Webcam
           audio={false}
           height={350}
           ref={this.setRef}
@@ -28,12 +38,18 @@ class PictureUpload extends React.Component {
           width={350}
           videoConstraints={videoConstraints}
         />
-        <Button color="danger" onClick={this.capture}>
+         <Button color="danger" onClick={this.capture}>
             Capture
         </Button>
-      </Container>
+          </div>
+          <div class="v2-about-submit">
+              <input type="submit" value="Save & Continue" />
+          </div>
+      </div>
+  </div>
     );
   }
 }
 
 export default PictureUpload;
+
