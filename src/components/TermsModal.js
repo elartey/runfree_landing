@@ -86,7 +86,7 @@ const TermsModal = props => {
           toggle={props.toggle}
           className="text-uppercase font-weight-light"
         >
-          Terms & Conditions
+          Terms and Conditions
         </ModalHeader>
         <ModalBody>
         <Terms />

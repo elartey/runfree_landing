@@ -42,7 +42,7 @@ class Landing extends React.Component {
                           6 years of age or older residing at my residence I
                           will also need to obtain a membership plan as well.
                           Membership will be provided to additional family
-                          members at a discounted rate of 20%...
+                          members at a discounted rate of 20% ...
                         </h4>
                         <Button className="read-more rounded" color="danger" onClick={this.toggle}>Read Terms & Conditions</Button>
                       </div>
