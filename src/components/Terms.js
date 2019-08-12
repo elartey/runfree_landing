@@ -26,7 +26,7 @@ class Terms extends React.Component {
               />{" "}
             </div>
             <div className="row d-flex justify-content-center pt-3">
-            <h3>THIS IS NOT AN INSURANCE PLAN</h3> <br />
+            <h4>THIS IS NOT AN INSURANCE PLAN</h4> <br />
             </div>
             <br />
             <h4
@@ -41,7 +41,7 @@ class Terms extends React.Component {
               Membership Application
             </h4>{" "}
             <br />
-            <p style={{fontSize: "1.2rem"}}> {terms.declaration} </p> <br />
+            <p style={{fontSize: "1.2rem"}} className="font-weight-light"> {terms.declaration} </p> <br />
             <h4
               style={{
                 background: "red",
@@ -54,7 +54,7 @@ class Terms extends React.Component {
               Medical Authorization/Assignment of Benefits{" "}
             </h4>
             <br />
-            <p style={{fontSize: "1.2rem"}}>{terms.benefits}</p> <br />
+            <p style={{fontSize: "1.2rem"}} className="font-weight-light">{terms.benefits}</p> <br />
             <h4
               style={{
                 background: "red",
@@ -67,7 +67,7 @@ class Terms extends React.Component {
               Lifetime Signature Authorization
             </h4>
             <br />
-            <p style={{fontSize: "1.2rem"}}>
+            <p style={{fontSize: "1.2rem"}} className="font-weight-light">
               To facilitate processing, I authorize the release to Day Kare
               Ambulance Service/EMS, and the GAHS or other insurer of any
               medical information or documentation held by anyone necessary to
@@ -81,7 +81,7 @@ class Terms extends React.Component {
               my coverage area.
             </p>{" "}
             <br />
-            <p style={{fontSize: "1.2rem"}}>
+            <p style={{fontSize: "1.2rem"}} className="font-weight-light">
               I understand that Day Kare Transport provides medically necessary
               ambulance transportation and that any violations of the terms of
               this agreement may result in immediate cancellation of my

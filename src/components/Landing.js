@@ -32,9 +32,9 @@ class Landing extends React.Component {
                   <div className="row">
                     <div className="col-sm-6 slider-content-area text-left">
                       <div className="v3 welcome-text">
-                        <h1>Day Kare Ambulance</h1>
+                        <h1 className="font-weight-normal">Day Kare Ambulance</h1>
                         <h2>Health Care Solutions</h2>
-                        <h4>
+                        <h4 className="font-weight-light">
                           I hereby apply for membership of my family in the Day
                           Kare Ambulance Subscription Program. I understand that
                           the enclosed annual fee will only provide coverage for

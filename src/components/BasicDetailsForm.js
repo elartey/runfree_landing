@@ -1,77 +1,134 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button } from "reactstrap";
+import PrimaryApplicant from "./PrimaryApplicant";
+import DependantForm from "./DependantForm";
 
-class BasicDetailsForm extends React.Component {
-  render() {
-    return (
-      <div className="col-sm-6 v3-homeform" style={{paddingTop: "135px !important"}}>
-        <div className="about-form">
-            <div className="form-title text-center">
-                <h2>Membership <span>Application </span> 1/4</h2>
-            </div>
-            <div className=" text-left">
-                <h2 style={{color: "wheat", fontSize: "16px", marginBottom: "7px" }}>APPLICANT
-                </h2>
-            </div>
-            <div className="v2-about-input">
-                <input type="text" name="first_name" id="firstName" placeholder="First Name" />
-            </div>
-            <div className="v2-about-input mr0">
-                <input type="text" name="last_name" id="lastName" placeholder="Last Name"/>
-            </div>
-            <div className="v2-about-input">
-                <div className="v2-about-select">
-                    <select>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                </div>
-            </div>
-            <div className="v2-about-input mr0">
-                <input type="text" name="address" id="address" placeholder="Residential Address" />
-            </div>
-            <div className="v2-about-input">
-                <input type="text"  name="email" id="emailAddress" placeholder="Email" />
-            </div>
-            <div className="v2-about-input mr0">
-                <input type="text"  name="tax-id" id="taxId" placeholder="T.I.N #" />
-            </div>
-            <div className="v2-about-input">
-                <input type="text"  name="phone_number" id="phoneNumber" placeholder="Phone Number" />
-            </div>
-            <div className="v2-about-input mr0">
-                <input type="text"   name="insurance_company" id="insuranceCompany" placeholder="Insurance Company" />
-            </div>
-            <div className="v2-about-input">
-                <input type="text" name="member_id" id="memberId" placeholder="Member ID" />
-            </div>
-            <div className="v2-about-input mr0"></div>
-            <div className=" text-left">
-                <h2 style={{color: "wheat", fontSize: "16px", marginBottom: "7px"}}>SPOUSE</h2>
-            </div>
-            <div className="v2-about-input">
-                <input type="text" placeholder="First Name" />
-            </div>
-            <div className="v2-about-input mr0">
-                <input type="text" placeholder="Last Name" />
-            </div>
-            <div className="v2-about-input">
-                <input type="text" placeholder="Last Name" />
-            </div>
-            <div className="v2-about-input mr0">
-                <div className="v2-about-select">
-                    <select>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                </div>
-            </div>
-            <div className="v2-about-submit">
-                <input type="submit" value="Save & Continue" />
-            </div>
+const BasicDetailsForm = props => {
+  const defaultState = {
+    showPrimary: true,
+    showDependant: false,
+    dependants: [],
+    page: 1,
+    showUpload: false,
+    showPayment: false,
+    title: "Applicant Details",
+    btnText: "Save & Continue"
+  };
+  let count = 0;
+  const [formState, setState] = useState(defaultState);
+
+  const next = () => {
+    if (formState.page === 1) {
+      let updateDependants = formState.dependants;
+      updateDependants.push(++count);
+      return setState({
+        ...formState,
+        showPrimary: false,
+        showDependant: true,
+        dependants: updateDependants,
+        page: 2,
+        title: "Add Dependant",
+        btnText: "Next"
+      });
+    }
+
+    if (formState.page === 2) {
+      return setState({
+        ...formState,
+        showDependant: false,
+        page: 3,
+        showUpload: true,
+        title: "Upload Picture",
+        btnText: "Next"
+      });
+    }
+
+    if (formState.page === 3) {
+      return setState({
+        ...formState,
+        showUpload: false,
+        showPayment: true,
+        page: 0,
+        title: "Payments",
+        btnText: "Finish"
+      });
+    }
+
+    if (formState.btnText === "Finish") {
+      reset();
+    }
+  };
+
+  const reset = () => {
+    setState(Object.assign(defaultState));
+  };
+
+  const addDependant = () => {
+    const newCount = formState.dependants;
+    newCount.push(++count);
+    setState({ ...formState, dependants: newCount });
+  };
+
+  const removeDependant = () => {
+    if (formState.dependants <= 1) {
+      return;
+    }
+    const updatedCount = formState.dependants;
+    updatedCount.shift();
+    setState({ ...formState, dependants: updatedCount });
+  };
+
+  return (
+    <div
+      className="col-sm-6 v3-homeform"
+      style={{ paddingTop: "135px !important" }}
+    >
+      <div className="about-form">
+        <div className="form-title text-center">
+          <h2>
+            Membership <span>Application </span>
+          </h2>
         </div>
+        {formState.page === 1 ? <PrimaryApplicant /> : null}
+        {formState.page === 2 ? (
+          <div>
+            {formState.dependants.map((item, index) => (
+              <DependantForm key={index} />
+            ))}
+          </div>
+        ) : null}
+        {formState.page === 2 ? (
+          <div>
+            <div className="mr0 float-left mb-4" style={{ width: "30%" }}>
+              <Button
+                color="danger"
+                className="btn-lg"
+                onClick={addDependant}
+                block
+              >
+                Add
+              </Button>
+            </div>
+            <div className="mr0 float-right mb-4" style={{ width: "30%" }}>
+              <Button
+                color="danger"
+                className="btn-lg"
+                onClick={removeDependant}
+                block
+              >
+                Remove
+              </Button>
+            </div>
+          </div>
+        ) : null}
+        <div className="mr0 mt-4">
+          <Button color="danger btn-lg" onClick={next} block>
+            {formState.btnText}
+          </Button>
+        </div>
+      </div>
     </div>
-    );
-  }
-}
+  );
+};
 
 export default BasicDetailsForm;

@@ -4,40 +4,44 @@ import { Input, Col, FormGroup, Container } from "reactstrap";
 class DependantForm extends React.Component {
   render() {
     return (
-      <Container>
-        <FormGroup row>
-          <Col sm={6}>
-            <Input
-              type="text"
-              name="first_name"
-              id="firstName"
-              placeholder="First Name"
-            />
-          </Col>
-          <Col sm={6}>
-            <Input
-              type="text"
-              name="last_name"
-              id="lastName"
-              placeholder="Last Name"
-            />
-          </Col>
-        </FormGroup>
-
-        <FormGroup row>
-          <Col sm={6}>
-            <Input
-              type="text"
-              name="dob"
-              id="dob"
-              placeholder="D.O.B e.g. 12/01/2001"
-            />
-          </Col>
-          <Col sm={6}>
-            <Input type="select" name="gender" id="lastName" multiple />
-          </Col>
-        </FormGroup>
-      </Container>
+      <div>
+        <div className=" text-left">
+          <h4
+            style={{
+              color: "wheat",
+              fontSize: "14px",
+              marginBottom: "10px"
+            }}
+          >
+            DEPENDANT
+          </h4>
+        </div>
+        <div className="v2-about-input">
+          <input
+            name="spouse_first_name"
+            type="text"
+            placeholder="First Name"
+          />
+        </div>
+        <div className="v2-about-input mr0">
+          <input name="spouse_last_name" type="text" placeholder="Last Name" />
+        </div>
+        <div className="v2-about-input mr0">
+          <input
+            name="dob"
+            type="text"
+            placeholder="Date of Birth e.g 01/01/1990"
+          />
+        </div>
+        <div className="v2-about-input pl-3">
+          <div className="v2-about-select">
+            <select name="spouse_gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+        </div>
+      </div>
     );
   }
 }
