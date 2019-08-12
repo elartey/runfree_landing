@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "reactstrap";
 import PrimaryApplicant from "./PrimaryApplicant";
 import DependantForm from "./DependantForm";
+import PictureUpload from "./PictureUpload";
 
 const BasicDetailsForm = props => {
   const defaultState = {
@@ -67,7 +68,6 @@ const BasicDetailsForm = props => {
     const newCount = formState.dependants;
     newCount.push(++count);
     setState({ ...formState, dependants: newCount });
-    console.log(formState.dependants);
   };
 
   const removeDependant = () => {
@@ -124,6 +124,7 @@ const BasicDetailsForm = props => {
             ) : null}
           </div>
         ) : null}
+        {formState.page === 3 ? <PictureUpload /> : null }
         <div className="mr0 mt-4">
           <Button color="danger btn-lg" onClick={next} block>
             {formState.btnText}

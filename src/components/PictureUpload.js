@@ -1,15 +1,24 @@
 import React from "react";
 import Webcam from "react-webcam";
-import { Button, Container } from "reactstrap";
+import { Button, Container, Row, Col } from "reactstrap";
 
 class PictureUpload extends React.Component {
-  setRef = (webcam) => {
+  constructor(props) {
+    super(props);
+    this.state = {
+      imageData: ""
+    };
+
+    this.capture = this.capture.bind(this);
+  }
+
+  setRef = webcam => {
     this.webcam = webcam;
   };
 
-  capture = () => {
-    const imgSrc = this.webcam.getScreenshot();
-    console.log(imgSrc);
+  capture = async () => {
+    const imgData = this.webcam.getScreenshot();
+    await this.setState({ imageData: imgData });
   };
 
   render() {
@@ -18,19 +27,37 @@ class PictureUpload extends React.Component {
       height: 480,
       facingMode: "user"
     };
+
     return (
       <Container>
+        <Row>
+          <Col>
+            <div className="float-left">
+              <Button color="danger" onClick={this.capture}>
+                Capture
+              </Button>
+            </div>
+          </Col>
+          <Col>
+            <div className="float-right">
+              <Button color="danger">Upload</Button>
+            </div>
+          </Col>
+        </Row>
         <Webcam
           audio={false}
-          height={350}
+          height={400}
           ref={this.setRef}
           screenshotFormat="image/jpeg"
-          width={350}
+          width={450}
           videoConstraints={videoConstraints}
         />
-        <Button color="danger" onClick={this.capture}>
-            Capture
-        </Button>
+        <input
+          name="image_data"
+          type="hidden"
+          placeholder=""
+          value={this.state.imageData}
+        />
       </Container>
     );
   }
