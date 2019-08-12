@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
-import { Button, Container, Col, Row } from "reactstrap";
-import RegistrationModal from "./RegistrationModal";
-import daykarelogo from "../static/daykarelogo.png";
+import React from "react";
+import BasicDetailsForm from "./BasicDetailsForm";
+import TermsModal from "./TermsModal";
+import { Button } from "reactstrap";
 
 class Landing extends React.Component {
   constructor(props) {
@@ -21,39 +21,42 @@ class Landing extends React.Component {
 
   render() {
     return (
-      <Fragment>
-        <Container fluid className="align-top">
-          <Row>
-            <Col>
-              <img
-                src={daykarelogo}
-                alt="DayKare Logo"
-                width="300"
-                height="250"
-                className="ml-5"
-              />
-              <p className="text-myted small text-center pt-2 ml-5">
-                * By clicking <em>Sign Up</em> you agree to the terms and conditions of the membership
-                application.
-              </p>
-            </Col>
-          </Row>
-          <div style={{marginLeft: 47 + "%"}}>
-          <Button
-                color="danger"
-                className="btn-danger"
-                onClick={this.toggle}
-              >
-                Sign Up
-              </Button>
+      <div>
+      <section className="home-area v3">
+        <div className="Modern-Slider">
+          <div className="item">
+            <div className="img-fill">
+              <img src="img/v3home.png" alt="jigsawlab" />
+              <div className="info">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-sm-6 slider-content-area text-left">
+                      <div className="v3 welcome-text">
+                        <h1>Day Kare Ambulance</h1>
+                        <h2>Health Care Solutions</h2>
+                        <h4>
+                          I hereby apply for membership of my family in the Day
+                          Kare Ambulance Subscription Program. I understand that
+                          the enclosed annual fee will only provide coverage for
+                          me. and my spouse and any dependent children that are
+                          6 years of age or older residing at my residence I
+                          will also need to obtain a membership plan as well.
+                          Membership will be provided to additional family
+                          members at a discounted rate of 20%...
+                        </h4>
+                        <Button className="read-more rounded" color="danger" onClick={this.toggle}>Read Terms & Conditions</Button>
+                      </div>
+                    </div>
+                    <BasicDetailsForm />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </Container>
-        <RegistrationModal
-          modal={this.state.modal}
-          toggle={this.toggle}
-          className="modal-dialog-centered"
-        />
-      </Fragment>
+        </div>
+      </section>
+      <TermsModal modal={this.state.modal} toggle={this.toggle} className="modal-diaglog-centered" />
+    </div>
     );
   }
 }
