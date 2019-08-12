@@ -35,6 +35,7 @@ class Terms extends React.Component {
                 color: "white",
                 textAlign: "left"
               }}
+              className="rounded pl-2"
             >
               {" "}
               Membership Application
@@ -47,6 +48,7 @@ class Terms extends React.Component {
                 color: "white",
                 textAlign: "left"
               }}
+              className="rounded pl-2"
             >
               {" "}
               Medical Authorization/Assignment of Benefits{" "}
@@ -59,6 +61,7 @@ class Terms extends React.Component {
                 color: "white",
                 textAlign: "left"
               }}
+              className="rounded pl-2"
             >
               {" "}
               Lifetime Signature Authorization
