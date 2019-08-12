@@ -6,7 +6,8 @@ class PictureUpload extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      imageData: ""
+      imageData: "",
+      status: ""
     };
 
     this.capture = this.capture.bind(this);
@@ -18,7 +19,11 @@ class PictureUpload extends React.Component {
 
   capture = async () => {
     const imgData = this.webcam.getScreenshot();
-    await this.setState({ imageData: imgData });
+    await this.setState({
+      ...this.state,
+      imageData: imgData,
+      status: "Captured!"
+    });
   };
 
   render() {
@@ -39,6 +44,9 @@ class PictureUpload extends React.Component {
             </div>
           </Col>
           <Col>
+            <p style={{ color: "white" }}>{this.state.status}</p>
+          </Col>
+          <Col>
             <div className="float-right">
               <Button color="danger">Upload</Button>
             </div>
@@ -46,14 +54,14 @@ class PictureUpload extends React.Component {
         </Row>
         <Webcam
           audio={false}
-          height={400}
+          height={350}
           ref={this.setRef}
           screenshotFormat="image/jpeg"
-          width={450}
+          width={400}
           videoConstraints={videoConstraints}
         />
         <input
-          name="image_data"
+          name="encoded_image"
           type="hidden"
           placeholder=""
           value={this.state.imageData}

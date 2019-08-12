@@ -44,7 +44,7 @@ class Landing extends React.Component {
                           Membership will be provided to additional family
                           members at a discounted rate of 20% ...
                         </h4>
-                        <Button className="read-more rounded" color="danger" onClick={this.toggle}>Read Terms & Conditions</Button>
+                        <Button className="read-more rounded btn-lg" color="danger" onClick={this.toggle}>Read Terms & Conditions</Button>
                       </div>
                     </div>
                     <BasicDetailsForm />

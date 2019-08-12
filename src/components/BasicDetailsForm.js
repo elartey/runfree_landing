@@ -3,32 +3,27 @@ import { Button } from "reactstrap";
 import PrimaryApplicant from "./PrimaryApplicant";
 import DependantForm from "./DependantForm";
 import PictureUpload from "./PictureUpload";
+import Payment from "./Payment";
 
 const BasicDetailsForm = props => {
   const defaultState = {
-    showPrimary: true,
-    showDependant: false,
     dependants: [],
     page: 1,
-    showUpload: false,
-    showPayment: false,
-    title: "Applicant Details",
     btnText: "Save & Continue"
   };
   let count = 0;
   const [formState, setState] = useState(defaultState);
 
   const next = () => {
+
+    console.log(formState.page);
     if (formState.page === 1) {
       let updateDependants = formState.dependants;
       updateDependants.push(++count);
       return setState({
         ...formState,
-        showPrimary: false,
-        showDependant: true,
         dependants: updateDependants,
         page: 2,
-        title: "Add Dependant",
         btnText: "Next"
       });
     }
@@ -36,21 +31,14 @@ const BasicDetailsForm = props => {
     if (formState.page === 2) {
       return setState({
         ...formState,
-        showDependant: false,
-        page: 3,
-        showUpload: true,
-        title: "Upload Picture",
-        btnText: "Next"
+        page: 3
       });
     }
 
     if (formState.page === 3) {
       return setState({
         ...formState,
-        showUpload: false,
-        showPayment: true,
-        page: 0,
-        title: "Payments",
+        page: 4,
         btnText: "Finish"
       });
     }
@@ -58,6 +46,7 @@ const BasicDetailsForm = props => {
     if (formState.btnText === "Finish") {
       reset();
     }
+    
   };
 
   const reset = () => {
@@ -80,57 +69,64 @@ const BasicDetailsForm = props => {
     setState({ ...formState, dependants: updatedCount });
   };
 
+  const handleSubmit = event => {
+    console.log("I got triggered");
+    event.preventDefault();
+    console.log(event.target);
+  };
+
   return (
     <div
       className="col-sm-6 v3-homeform"
       style={{ paddingTop: "135px !important" }}
     >
-      <div className="about-form">
-        <div className="form-title text-center">
-          <h2>
-            Membership <span>Application </span>
-          </h2>
-        </div>
-        {formState.page === 1 ? <PrimaryApplicant /> : null}
-        {formState.page === 2 ? (
-          <div>
-            {formState.dependants.map((item, index) => (
-              <DependantForm key={index} />
-            ))}
-            {formState.dependants.length <= 2 ? (
-              <div className="mr0 float-left mb-4" style={{ width: "30%" }}>
-                <Button
-                  color="danger"
-                  className="btn-lg"
-                  onClick={addDependant}
-                  block
-                >
-                  Add
-                </Button>
-              </div>
-            ) : null}
-            {formState.dependants.length === 0 ||
-            formState.dependants.length >= 2 ? (
-              <div className="mr0 float-right mb-4" style={{ width: "30%" }}>
-                <Button
-                  color="danger"
-                  className="btn-lg"
-                  onClick={removeDependant}
-                  block
-                >
-                  Remove
-                </Button>
-              </div>
-            ) : null}
+        <div className="about-form">
+          <div className="form-title text-center">
+            <h2>
+              Membership <span>Application </span>
+            </h2>
           </div>
-        ) : null}
-        {formState.page === 3 ? <PictureUpload /> : null }
-        <div className="mr0 mt-4">
-          <Button color="danger btn-lg" onClick={next} block>
-            {formState.btnText}
-          </Button>
+          {formState.page === 1 ? <PrimaryApplicant /> : null}
+          {formState.page === 2 ? (
+            <div>
+              {formState.dependants.map((item, index) => (
+                <DependantForm key={index} />
+              ))}
+              {formState.dependants.length <= 2 ? (
+                <div className="mr0 float-left mb-4" style={{ width: "30%" }}>
+                  <Button
+                    color="danger"
+                    className="btn-lg"
+                    onClick={addDependant}
+                    block
+                  >
+                    Add
+                  </Button>
+                </div>
+              ) : null}
+              {formState.dependants.length === 0 ||
+              formState.dependants.length >= 2 ? (
+                <div className="mr0 float-right mb-4" style={{ width: "30%" }}>
+                  <Button
+                    color="danger"
+                    className="btn-lg"
+                    onClick={removeDependant}
+                    block
+                  >
+                    Remove
+                  </Button>
+                </div>
+              ) : null}
+            </div>
+          ) : null}
+          {formState.page === 3 ? <PictureUpload /> : null}
+          {formState.page === 4 ? <Payment /> : null}
+          <div className="mr0 mt-4">
+            <Button color="danger btn-lg" onClick={next} block>
+              {formState.btnText}
+            </Button>
+          </div>
         </div>
-      </div>
     </div>
   );
 };

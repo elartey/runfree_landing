@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import terms from "../assets/terms";
 
 class Terms extends React.Component {
@@ -51,7 +51,7 @@ class Terms extends React.Component {
               className="rounded pl-2"
             >
               {" "}
-              Medical Authorization/Assignment of Benefits{" "}
+              Medical Authorization / Assignment of Benefits{" "}
             </h4>
             <br />
             <p style={{fontSize: "1.2rem"}} className="font-weight-light">{terms.benefits}</p> <br />

@@ -1,11 +1,10 @@
 import React from "react";
-import { Input, Col, FormGroup, Container } from "reactstrap";
 
 class DependantForm extends React.Component {
   render() {
     return (
       <div>
-        <div className=" text-left">
+        <div className="text-left">
           <h4
             style={{
               color: "wheat",
