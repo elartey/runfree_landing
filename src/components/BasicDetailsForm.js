@@ -67,12 +67,14 @@ const BasicDetailsForm = props => {
     const newCount = formState.dependants;
     newCount.push(++count);
     setState({ ...formState, dependants: newCount });
+    console.log(formState.dependants);
   };
 
   const removeDependant = () => {
     if (formState.dependants <= 1) {
       return;
     }
+
     const updatedCount = formState.dependants;
     updatedCount.shift();
     setState({ ...formState, dependants: updatedCount });
@@ -95,30 +97,31 @@ const BasicDetailsForm = props => {
             {formState.dependants.map((item, index) => (
               <DependantForm key={index} />
             ))}
-          </div>
-        ) : null}
-        {formState.page === 2 ? (
-          <div>
-            <div className="mr0 float-left mb-4" style={{ width: "30%" }}>
-              <Button
-                color="danger"
-                className="btn-lg"
-                onClick={addDependant}
-                block
-              >
-                Add
-              </Button>
-            </div>
-            <div className="mr0 float-right mb-4" style={{ width: "30%" }}>
-              <Button
-                color="danger"
-                className="btn-lg"
-                onClick={removeDependant}
-                block
-              >
-                Remove
-              </Button>
-            </div>
+            {formState.dependants.length <= 2 ? (
+              <div className="mr0 float-left mb-4" style={{ width: "30%" }}>
+                <Button
+                  color="danger"
+                  className="btn-lg"
+                  onClick={addDependant}
+                  block
+                >
+                  Add
+                </Button>
+              </div>
+            ) : null}
+            {formState.dependants.length === 0 ||
+            formState.dependants.length >= 2 ? (
+              <div className="mr0 float-right mb-4" style={{ width: "30%" }}>
+                <Button
+                  color="danger"
+                  className="btn-lg"
+                  onClick={removeDependant}
+                  block
+                >
+                  Remove
+                </Button>
+              </div>
+            ) : null}
           </div>
         ) : null}
         <div className="mr0 mt-4">

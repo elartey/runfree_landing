@@ -18,24 +18,24 @@ class DependantForm extends React.Component {
         </div>
         <div className="v2-about-input">
           <input
-            name="spouse_first_name"
+            name="spouse[first_name]"
             type="text"
             placeholder="First Name"
           />
         </div>
         <div className="v2-about-input mr0">
-          <input name="spouse_last_name" type="text" placeholder="Last Name" />
+          <input name="spouse[last_name]" type="text" placeholder="Last Name" />
         </div>
         <div className="v2-about-input mr0">
           <input
-            name="dob"
+            name="spouse[dob]"
             type="text"
             placeholder="Date of Birth e.g 01/01/1990"
           />
         </div>
         <div className="v2-about-input pl-3">
           <div className="v2-about-select">
-            <select name="spouse_gender">
+            <select name="spouse[gender]">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
