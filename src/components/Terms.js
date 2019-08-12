@@ -41,7 +41,7 @@ class Terms extends React.Component {
               Membership Application
             </h4>{" "}
             <br />
-            <p> {terms.declaration} </p> <br />
+            <p style={{fontSize: "1.2rem"}}> {terms.declaration} </p> <br />
             <h4
               style={{
                 background: "red",
@@ -54,7 +54,7 @@ class Terms extends React.Component {
               Medical Authorization/Assignment of Benefits{" "}
             </h4>
             <br />
-            <p>{terms.benefits}</p> <br />
+            <p style={{fontSize: "1.2rem"}}>{terms.benefits}</p> <br />
             <h4
               style={{
                 background: "red",
@@ -67,7 +67,7 @@ class Terms extends React.Component {
               Lifetime Signature Authorization
             </h4>
             <br />
-            <p>
+            <p style={{fontSize: "1.2rem"}}>
               To facilitate processing, I authorize the release to Day Kare
               Ambulance Service/EMS, and the GAHS or other insurer of any
               medical information or documentation held by anyone necessary to
@@ -81,8 +81,8 @@ class Terms extends React.Component {
               my coverage area.
             </p>{" "}
             <br />
-            <p>
-              I understand that Day Kare Transport. provides medically necessary
+            <p style={{fontSize: "1.2rem"}}>
+              I understand that Day Kare Transport provides medically necessary
               ambulance transportation and that any violations of the terms of
               this agreement may result in immediate cancellation of my
               membership or other penalty. I also understand that this
