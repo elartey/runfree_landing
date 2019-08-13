@@ -24,6 +24,7 @@ class PictureUpload extends React.Component {
       imageData: imgData,
       status: "Captured!"
     });
+    this.props.capture(imgData);
   };
 
   render() {
@@ -32,6 +33,8 @@ class PictureUpload extends React.Component {
       height: 480,
       facingMode: "user"
     };
+
+    console.log(this.props.currentState);
 
     return (
       <Container>
