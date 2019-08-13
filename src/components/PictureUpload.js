@@ -12,6 +12,8 @@ class PictureUpload extends React.Component {
 
     this.capture = this.capture.bind(this);
     this.upload = this.upload.bind(this);
+    this.uploadListener = this.uploadListener.bind(this);
+    this.triggerUpload = this.triggerUpload.bind(this);
   }
 
   setRef = webcam => {
@@ -28,13 +30,23 @@ class PictureUpload extends React.Component {
     this.props.capture(imgData);
   };
 
-  upload = () => {
+  uploadListener = event => {
+    const capturedFile = event.target.files[0];
+    this.upload(capturedFile);
+  };
+
+  triggerUploadBtn = () => {
     document.getElementById("file-button").click();
+  };
+
+  upload = userFile => {
+    console.log(userFile);
+    this.props.uploadHandler(userFile);
     this.setState({
       ...this.state,
       status: "File Uploaded!"
     });
-  }
+  };
 
   render() {
     const videoConstraints = {
@@ -54,7 +66,9 @@ class PictureUpload extends React.Component {
             </div>
           </Col>
           <Col>
-            <p style={{ color: "white" }} className="pt-2">{this.state.status}</p>
+            <p style={{ color: "white" }} className="pt-2">
+              {this.state.status}
+            </p>
           </Col>
           <Col>
             <div className="float-right">
@@ -64,8 +78,11 @@ class PictureUpload extends React.Component {
                 name="user_img"
                 id="file-button"
                 hidden
+                onChange={this.uploadListener}
               />
-                <Button color="danger" onClick={this.upload}>Upload</Button>
+              <Button color="danger" onClick={this.triggerUploadBtn}>
+                Upload
+              </Button>
             </div>
           </Col>
         </Row>

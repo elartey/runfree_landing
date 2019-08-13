@@ -96,6 +96,13 @@ const BasicDetailsForm = props => {
       });
   };
 
+  const handleUpload = fileName => {
+    const { formData } = { ...formState };
+    const current = formData;
+    current["user_img"] = fileName;
+    setState({...formState, formData: current});
+  };
+
   return (
     <div
       className="col-sm-6 v3-homeform"
@@ -146,7 +153,7 @@ const BasicDetailsForm = props => {
           </div>
         ) : null}
         {formState.page === 3 ? (
-          <PictureUpload capture={captureImage} currentState={formState} />
+          <PictureUpload capture={captureImage} uploadHandler={handleUpload} />
         ) : null}
         {formState.page === 4 ? <Payment /> : null}
         <div className="mr0 mt-4">
