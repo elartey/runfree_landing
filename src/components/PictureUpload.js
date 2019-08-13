@@ -13,7 +13,7 @@ class PictureUpload extends React.Component {
     this.capture = this.capture.bind(this);
     this.upload = this.upload.bind(this);
     this.uploadListener = this.uploadListener.bind(this);
-    this.triggerUpload = this.triggerUpload.bind(this);
+    this.triggerUploadBtn = this.triggerUploadBtn.bind(this);
   }
 
   setRef = webcam => {
