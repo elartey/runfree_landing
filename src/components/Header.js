@@ -6,7 +6,7 @@ const Header = () => (
       <div className="container">
         <div className="row d-flex justify-content-center">
           <div className="col-xs-12">
-            <a className="site-logo" href="#">
+            <a className="site-logo" href="/">
               <img
                 style={{ height: "87px" }}
                 src="img/logo.png"
