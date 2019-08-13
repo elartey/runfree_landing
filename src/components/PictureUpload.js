@@ -11,6 +11,7 @@ class PictureUpload extends React.Component {
     };
 
     this.capture = this.capture.bind(this);
+    this.upload = this.upload.bind(this);
   }
 
   setRef = webcam => {
@@ -27,14 +28,20 @@ class PictureUpload extends React.Component {
     this.props.capture(imgData);
   };
 
+  upload = () => {
+    document.getElementById("file-button").click();
+    this.setState({
+      ...this.state,
+      status: "File Uploaded!"
+    });
+  }
+
   render() {
     const videoConstraints = {
       width: 640,
       height: 480,
       facingMode: "user"
     };
-
-    console.log(this.props.currentState);
 
     return (
       <Container>
@@ -47,11 +54,18 @@ class PictureUpload extends React.Component {
             </div>
           </Col>
           <Col>
-            <p style={{ color: "white" }}>{this.state.status}</p>
+            <p style={{ color: "white" }} className="pt-2">{this.state.status}</p>
           </Col>
           <Col>
             <div className="float-right">
-              <Button color="danger">Upload</Button>
+              <input
+                type="file"
+                className="form-control"
+                name="user_img"
+                id="file-button"
+                hidden
+              />
+                <Button color="danger" onClick={this.upload}>Upload</Button>
             </div>
           </Col>
         </Row>
