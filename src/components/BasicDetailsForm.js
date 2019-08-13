@@ -17,7 +17,6 @@ const BasicDetailsForm = props => {
   const [formState, setState] = useState(defaultState);
 
   const next = () => {
-    console.log(formState.page);
     if (formState.page === 1) {
       let updateDependants = formState.dependants;
       updateDependants.push(++count);
