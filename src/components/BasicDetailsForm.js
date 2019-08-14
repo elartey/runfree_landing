@@ -97,18 +97,23 @@ const BasicDetailsForm = props => {
 
   const submitData = data => {
     let userData = new FormData();
-    for ( let key in data) {
-      userData.set(key, data[key])
+    for (let key in data) {
+      userData.set(key, data[key]);
     }
 
-    for(let pair of userData.entries()) {
-      console.log(pair[0]+ ', '+ pair[1]); 
-   }
+    for (let pair of userData.entries()) {
+      console.log(pair[0] + ", " + pair[1]);
+    }
+
+    const config = {
+      headers: { "Content-Type": "multipart/form-data" }
+    };
 
     axios
       .post(
         "https://us-central1-runfree-test.cloudfunctions.net/register-user",
-        { ...userData }
+        userData,
+        config
       )
       .then(res => {
         console.log(res);
