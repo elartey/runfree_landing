@@ -96,10 +96,14 @@ const BasicDetailsForm = props => {
   };
 
   const submitData = data => {
-    const userData = new FormData({...data});
-    userData.delete('user_img');
-    const userFile = data["user_img"];
-    userData.append("user_img", userFile, userFile.name);
+    let userData = new FormData();
+    for ( let key in data) {
+      userData.set(key, data[key])
+    }
+
+    for(let pair of userData.entries()) {
+      console.log(pair[0]+ ', '+ pair[1]); 
+   }
 
     axios
       .post(
