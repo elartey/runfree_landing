@@ -11,7 +11,9 @@ const BasicDetailsForm = props => {
     dependants: [],
     page: 1,
     btnText: "Save & Continue",
-    formData: {}
+    formData: {
+      formDependants: []
+    }
   };
   let count = 0;
   const [formState, setState] = useState(defaultState);
@@ -70,11 +72,19 @@ const BasicDetailsForm = props => {
   };
 
   const handleApplicantChange = input => event => {
-    event.preventDefault();
     const { formData } = { ...formState };
     const current = formData;
     const { value } = event.target;
     current[input] = value;
+    setState({ ...formState, formData: current });
+  };
+
+  const handleDependantChange = (data, key) => {
+    const { formData } = { ...formState };
+    const current = formData;
+    const { formDependants } = current;
+    const dependantList = formDependants;
+    dependantList[key] = data;
     setState({ ...formState, formData: current });
   };
 
@@ -100,7 +110,7 @@ const BasicDetailsForm = props => {
     const { formData } = { ...formState };
     const current = formData;
     current["user_img"] = fileName;
-    setState({...formState, formData: current});
+    setState({ ...formState, formData: current });
   };
 
   return (
@@ -123,7 +133,11 @@ const BasicDetailsForm = props => {
         {formState.page === 2 ? (
           <div>
             {formState.dependants.map((item, index) => (
-              <DependantForm key={index} />
+              <DependantForm
+                key={index}
+                formId={index}
+                handleDependantChange={handleDependantChange}
+              />
             ))}
             {formState.dependants.length <= 2 ? (
               <div className="mr0 float-left mb-4" style={{ width: "30%" }}>
