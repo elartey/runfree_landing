@@ -96,10 +96,15 @@ const BasicDetailsForm = props => {
   };
 
   const submitData = data => {
+    const userData = new FormData(data);
+    userData.delete('user_img');
+    const userFile = data["user_img"];
+    userData.append("user_img", userFile, userFile.name);
+
     axios
       .post(
         "https://us-central1-runfree-test.cloudfunctions.net/register-user",
-        { ...data }
+        { ...userData }
       )
       .then(res => {
         console.log(res);
