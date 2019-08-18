@@ -66,7 +66,7 @@ class PictureUpload extends React.Component {
             </div>
           </Col>
           <Col>
-            <p style={{ color: "white" }} className="pt-2">
+            <p style={{ color: "#000" }} className="pt-2">
               {this.state.status}
             </p>
           </Col>

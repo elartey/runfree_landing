@@ -8,7 +8,7 @@ const PrimaryApplicant = props => {
       <div className=" text-left">
         <h4
           style={{
-            color: "wheat",
+            color: "#ecae39",
             fontSize: "14px",
             marginBottom: "7px"
           }}
@@ -67,10 +67,10 @@ const PrimaryApplicant = props => {
       <div className="v2-about-input mr0">
         <input
           type="text"
-          name="tax-id"
-          id="taxId"
-          placeholder="T.I.N #"
-          onChange={props.handleApplicantChange("tax-id")}
+          name="member_id"
+          id="memberId"
+          placeholder="Member ID"
+          onChange={props.handleApplicantChange("member_id")}
         />
       </div>
       <div className="v2-about-input">
@@ -104,7 +104,7 @@ const PrimaryApplicant = props => {
       <div className=" text-left">
         <h4
           style={{
-            color: "wheat",
+            color: "#ecae39",
             fontSize: "14px",
             marginBottom: "7px"
           }}

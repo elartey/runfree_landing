@@ -915,8 +915,7 @@ button.NextArrowbrand:hover {
 
 .news-content {
     position: absolute;
-    '
- left: 0;
+    left: 0;
     top: 0;
     z-index: 2;
     width: 55%;
@@ -1483,7 +1482,7 @@ button.NextArrowbrand:hover {
     border-radius: 3px;
     border: 1px solid #5ac8cb;
     background: #5ac8cb;
-    color: #fff;
+    color: #000;
     font-family: 'PT Sans', sans-serif;
 }
 
@@ -1504,7 +1503,7 @@ button.NextArrowbrand:hover {
     font-family: fontawesome;
     position: absolute;
     right: 3%;
-    color: #fff;
+    color: #000;
     top: 25%;
     font-size: 20px;
     z-index: 1;
@@ -1515,8 +1514,8 @@ button.NextArrowbrand:hover {
     width: 100%;
     padding-left: 20px;
     background: transparent;
-    border: 1px solid #5ac8cb;
-    color: #fff;
+    border: 1px solid #000;
+    color: #000;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1531,7 +1530,7 @@ button.NextArrowbrand:hover {
 }
 
 .v2-about-input input::-moz-placeholder {
-    color: #fff;
+    color: #000;
     opacity: 1;
 }
 
@@ -1547,7 +1546,7 @@ button.NextArrowbrand:hover {
 
 .v2-about-textarea textarea::-moz-placeholder {
     opacity: 1;
-    color: #fff;
+    color: #000;
 }
 
 .v2-about-submit input {
@@ -1575,10 +1574,10 @@ button.NextArrowbrand:hover {
 }
 
 .form-title.text-center h2 {
-    color: #fff;
-    padding-bottom: 20px;
-    margin-bottom: 30px;
-    border-bottom: 2px dashed #fff;
+    color: #000;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 0.2rem solid #000;
 }
 
 .form-title.text-center h2 span {
@@ -1952,9 +1951,9 @@ button.NextArrowbrand:hover {
 /* start version three logo area */
 
 .version-3-logo {
-    background: #151f29;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    background: #e9ecef8c;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
 }
 
 .home-area.v3 .menu li > ul {
@@ -2057,17 +2056,17 @@ button.NextArrowbrand:hover {
 }
 
 .v3-homeform .about-form {
-    padding: 30px;
-    background:rgb(22, 31, 41);
+    padding: 2.5rem;
+    background:#f1f1f1;
 }
 
 .v3-homeform .v2-about-input input {
-    border: 1px solid rgba(90, 200, 203, .75);
+    border: 1px solid #000;
     background: transparent;
 }
 
 .v3-homeform .v2-about-textarea textarea {
-    border: 1px solid rgba(90, 200, 203, .75);
+    border: 1px solid #000;
     background: transparent;
     height: 110px;
 }
@@ -2994,11 +2993,11 @@ button.NextArrowbrand:hover {
     width: 247px;
 }
 
-.read-more:hover,
+/* .read-more:hover,
 .read-more:focus {
     background: #239397 none repeat scroll 0 0;
     color: #fff;
-}
+} */
 
 .single-news-post {
     box-shadow: 3px 5px 10px rgba(0, 0, 0, .07);
@@ -3392,15 +3391,15 @@ blockquote {
 }
 
 .contact-formv2 .v2-about-input input::-webkit-input-placeholder {
-    color: #999999
+    color: #000000
 }
 
 .contact-formv2 .v2-about-textarea textarea::-webkit-input-placeholder {
-    color: #999999
+    color: #000000
 }
 
 .contact-formv2 .v2-about-input input::-moz-placeholder {
-    color: #999;
+    color: #000;
 }
 
 .contact-formv2 .v2-about-textarea textarea {
@@ -3558,7 +3557,7 @@ blockquote {
     height: 50px;
     bottom: 3.8%;
     width: 50px;
-    line-height100px;
+    line-height: 100px;
     background: #fff;
     border-color: #fff;
     font-size: 22px;

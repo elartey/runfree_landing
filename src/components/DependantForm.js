@@ -28,7 +28,7 @@ class DependantForm extends React.Component {
         <div className="text-left">
           <h4
             style={{
-              color: "wheat",
+              color: "#ecae39",
               fontSize: "14px",
               marginBottom: "10px"
             }}
@@ -77,6 +77,7 @@ class DependantForm extends React.Component {
                 `dependant_gender${this.props.formId}`
               )}
               defaultValue=""
+              style={{width: "104%"}}
             >
               <option value=""> </option>
               <option value="Male">Male</option>

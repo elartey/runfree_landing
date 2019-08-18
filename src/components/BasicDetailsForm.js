@@ -135,7 +135,7 @@ const BasicDetailsForm = props => {
       <div className="about-form">
         <div className="form-title text-center">
           <h2>
-            Membership <span>Application </span>
+            Membership Application
           </h2>
         </div>
         {formState.page === 1 ? (
@@ -184,7 +184,7 @@ const BasicDetailsForm = props => {
           <PictureUpload capture={captureImage} uploadHandler={handleUpload} />
         ) : null}
         {formState.page === 4 ? <Payment /> : null}
-        <div className="mr0 mt-4">
+        <div className="mr0" style={{marginTop: "12rem"}}>
           <Button color="danger btn-lg" onClick={next} block>
             {formState.btnText}
           </Button>

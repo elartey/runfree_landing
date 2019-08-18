@@ -216,13 +216,13 @@ input:-webkit-autofill:focus {
 
 ::-webkit-input-placeholder {
     /* Chrome */
-    color: #fff;
+    color: #000;
     opacity: 1
 }
 
 ::-moz-placeholder {
     /* Firefox 19+ */
-    color: #fff;
+    color: #000000;
     opacity: 1;
 }
 

@@ -8,7 +8,7 @@ const Header = () => (
           <div className="col-xs-12">
             <a className="site-logo" href="/">
               <img
-                style={{ height: "87px" }}
+                style={{ height: "70px" }}
                 src="img/logo.png"
                 alt="jigsawlab"
               />
