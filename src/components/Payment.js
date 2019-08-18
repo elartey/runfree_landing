@@ -3,7 +3,7 @@ import React from "react";
 const Payments = props => {
   console.log(props);
   return (
-      <div className="form-title about-form" style={{ color: "white" }}>
+      <div className="form-title about-formV2" style={{ color: "white" }}>
         <div className="text-center mb-5">
           <h4
             style={{

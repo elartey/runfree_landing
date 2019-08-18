@@ -987,7 +987,7 @@ button.NextArrowbrand:hover {
 .nesws-media .media-body {
     font-weight: 400;
     line-height: 24px;
-    padding-top: ;
+    padding-top: 10px;
 }
 
 .nesws-media .media-heading {
@@ -1592,6 +1592,11 @@ button.NextArrowbrand:hover {
 .about-form {
     padding: 30px;
     background: #23b5b9;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-formV2 {
+    padding: 30px;
 }
 
 .v2 .aboutUs-contant .about-title h1 {
