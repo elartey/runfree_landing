@@ -56,7 +56,7 @@ class PictureUpload extends React.Component {
     };
 
     return (
-      <Container>
+      <Container className="clearfix">
         <Row>
           <Col>
             <div className="float-left">
@@ -88,10 +88,10 @@ class PictureUpload extends React.Component {
         </Row>
         <Webcam
           audio={false}
-          height={350}
+          height={300}
           ref={this.setRef}
           screenshotFormat="image/jpeg"
-          width={400}
+          width={350}
           videoConstraints={videoConstraints}
         />
         <input

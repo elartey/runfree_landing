@@ -91,15 +91,7 @@ const PrimaryApplicant = props => {
           onChange={props.handleApplicantChange("insurance_company")}
         />
       </div>
-      <div className="v2-about-input">
-        <input
-          type="text"
-          name="member_id"
-          id="memberId"
-          placeholder="Member ID"
-          onChange={props.handleApplicantChange("member_id")}
-        />
-      </div>
+      <div className="v2-about-input" />
       <div className="v2-about-input mr0" />
       <div className=" text-left">
         <h4

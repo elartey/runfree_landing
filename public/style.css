@@ -1346,7 +1346,7 @@ button.NextArrowbrand:hover {
 .Modern-Slider.v2 {
     height: 610px;
     position: relative;
-    background: url(img/banner.jpg) no-repeat center center / cover;
+    background: url(img/daykare-bg.png) no-repeat center center / cover;
 }
 
 .Modern-Slider.v2 .item .info {
@@ -1481,7 +1481,7 @@ button.NextArrowbrand:hover {
     padding-left: 20px;
     border-radius: 3px;
     border: 1px solid #5ac8cb;
-    background: #5ac8cb;
+    /* background: #5ac8cb; */
     color: #000;
     font-family: 'PT Sans', sans-serif;
 }
@@ -1491,7 +1491,7 @@ button.NextArrowbrand:hover {
     height: 100%;
     position: relative;
     border-radius: 3px;
-    background: #5ac8cb;
+    /* background: #5ac8cb; */
 }
 
 .v2-about-input .v2-about-select select option {
@@ -2043,7 +2043,7 @@ button.NextArrowbrand:hover {
 }
 
 .welcome-text.v3 h4 {
-    background: rgba(0,0,0,.075);
+    background: rgba(0,0,0,0.53);
     color: #fff;
 }
 
@@ -2052,17 +2052,17 @@ button.NextArrowbrand:hover {
 }
 
 .v3 .Modern-Slider .item .img-fill .info {
-    background: rgba(94, 89, 89, 0.6);
+    background: rgba(94, 89, 89, 0.12);
 }
 
 .v3-homeform .about-form {
     padding: 2.5rem;
-    background:#f1f1f1;
+    background:#f1f1f1f2;
 }
 
 .v3-homeform .v2-about-input input {
     border: 1px solid #000;
-    background: transparent;
+    /* background: transparent; */
 }
 
 .v3-homeform .v2-about-textarea textarea {

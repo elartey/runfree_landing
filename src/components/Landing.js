@@ -26,14 +26,15 @@ class Landing extends React.Component {
           <div className="Modern-Slider">
             <div className="item">
               <div className="img-fill">
-                <img src="img/v3home.png" alt="jigsawlab" />
+                <img src="img/daykare-bg.png" alt="jigsawlab" />
                 <div className="info">
                   <div className="container">
                     <div className="row">
                       <div className="col-sm-6 slider-content-area text-left">
                         <div className="v3 welcome-text">
                           <h1 className="font-weight-normal">
-                            Day Kare Ambulance<br />
+                            Day Kare Ambulance
+                            <br />
                           </h1>
                           <h2>A.R.A.M</h2> <br />
                           <h2>Health Care Solutions</h2>
@@ -57,7 +58,7 @@ class Landing extends React.Component {
                           </Button>
                         </div>
                       </div>
-                      <BasicDetailsForm formData={this.state.formData} />
+                        <BasicDetailsForm formData={this.state.formData} />
                     </div>
                   </div>
                 </div>
