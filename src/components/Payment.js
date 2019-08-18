@@ -29,7 +29,7 @@ const Payments = props => {
           type="text"
           name="reference_id"
           id="reference_id"
-          placeholder="Referece ID"
+          placeholder="Reference ID"
           onChange={props.handlePaymentReference("reference_id")}
         />
       </div>
