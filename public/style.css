@@ -198,7 +198,17 @@ nav.navbar {
 
 .home-area {
     position: relative;
-    height: 700px;
+    height: 100%;
+}
+
+.home-area-background {
+    background-image: url('img/daykare-bg.png');
+    z-index: 2;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 3rem;
+    min-height: 100%;
 }
 
 .navbar-area {

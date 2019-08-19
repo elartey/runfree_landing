@@ -1,8 +1,6 @@
 import React from "react";
 
 const PrimaryApplicant = props => {
-  console.log(props);
-
   return (
     <div>
       <div className=" text-left">

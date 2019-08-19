@@ -40,7 +40,6 @@ class PictureUpload extends React.Component {
   };
 
   upload = userFile => {
-    console.log(userFile);
     this.props.uploadHandler(userFile);
     this.setState({
       ...this.state,

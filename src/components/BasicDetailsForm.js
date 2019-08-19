@@ -101,10 +101,6 @@ const BasicDetailsForm = props => {
       userData.set(key, data[key]);
     }
 
-    for (let pair of userData.entries()) {
-      console.log(pair[0] + ", " + pair[1]);
-    }
-
     const config = {
       headers: { "Content-Type": "multipart/form-data" }
     };

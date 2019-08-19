@@ -384,7 +384,7 @@
             bottom: 15px
         }
         .home-area {
-            height: 600px;
+            height: 100%;
         }
         .navbar-header .navbar-toggle {
             float: none;
