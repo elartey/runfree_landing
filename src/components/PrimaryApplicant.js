@@ -21,6 +21,7 @@ const PrimaryApplicant = props => {
           id="firstName"
           placeholder="First Name"
           onChange={props.handleApplicantChange("first_name")}
+          required
         />
       </div>
       <div className="v2-about-input mr0">
@@ -30,6 +31,7 @@ const PrimaryApplicant = props => {
           id="lastName"
           placeholder="Last Name"
           onChange={props.handleApplicantChange("last_name")}
+          required
         />
       </div>
       <div className="v2-about-input">
@@ -38,7 +40,7 @@ const PrimaryApplicant = props => {
             name="applicant_gender"
             onChange={props.handleApplicantChange("applicant_gender")}
           >
-            <option value="">{" "}</option>
+            <option value="" disabled selected>Select gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>
@@ -78,6 +80,7 @@ const PrimaryApplicant = props => {
           id="phoneNumber"
           placeholder="Phone Number"
           onChange={props.handleApplicantChange("phone_number")}
+          required
         />
       </div>
       <div className="v2-about-input mr0">
@@ -124,7 +127,7 @@ const PrimaryApplicant = props => {
             name="spouse_gender"
             onChange={props.handleApplicantChange("spouse_gender")}
           >
-            <option value="">{" "}</option>
+            <option value="" disabled selected>Select gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>

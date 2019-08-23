@@ -79,7 +79,7 @@ class DependantForm extends React.Component {
               defaultValue=""
               style={{width: "104%"}}
             >
-              <option value=""> </option>
+              <option value="" disabled selected>Select gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>

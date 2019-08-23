@@ -90,7 +90,7 @@ class PictureUpload extends React.Component {
           height={300}
           ref={this.setRef}
           screenshotFormat="image/jpeg"
-          width={350}
+          width={300}
           videoConstraints={videoConstraints}
         />
         <input

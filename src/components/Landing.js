@@ -21,12 +21,11 @@ class Landing extends React.Component {
 
   render() {
     return (
-      <div>
-        <section className="home-area home-area-background v3">
+      <div style={{paddingTop: "3rem"}}>
+        <section className="home-area v3">
           <div className="">
             <div className="item">
               <div className="img-fill">
-                {/* <img src="img/daykare-bg.png" alt="jigsawlab" /> */}
                 <div className="info">
                   <div className="container">
                     <div className="row">

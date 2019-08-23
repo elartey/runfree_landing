@@ -111,9 +111,7 @@ const BasicDetailsForm = props => {
         userData,
         config
       )
-      .then(res => {
-        console.log(res);
-      });
+      .then(res => {});
   };
 
   const handleUpload = fileName => {
@@ -124,10 +122,7 @@ const BasicDetailsForm = props => {
   };
 
   return (
-    <div
-      className="col-sm-6 v3-homeform"
-      style={{ paddingTop: "135px !important" }}
-    >
+    <div className="col-sm-6 v3-homeform">
       <div className="about-form">
         <div className="form-title text-center">
           <h2>Membership Application</h2>
@@ -180,7 +175,7 @@ const BasicDetailsForm = props => {
         {formState.page === 4 ? (
           <Payment handlePaymentReference={handleApplicantChange} />
         ) : null}
-        <div className="mr0" style={{ marginTop: "12rem" }}>
+        <div className="mr0">
           <Button color="danger btn-lg" onClick={next} block>
             {formState.btnText}
           </Button>
