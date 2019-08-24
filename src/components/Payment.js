@@ -28,7 +28,7 @@ const Payments = props => {
         <li className="list-group-item">
           #5. Enter mobile number (024769228) again to confirm{" "}
         </li>
-        <li className="list-group-item">#6. Enter amount</li>
+        <li className="list-group-item">#6. Enter amount 60 GHS</li>
         <li className="list-group-item">#7. Enter reference text</li>
         <li className="list-group-item">
           #8. Please enter the mobile money transaction id below. You can find this in the transaction SMS.{" "}
