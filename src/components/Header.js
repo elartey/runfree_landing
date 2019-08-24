@@ -1,7 +1,7 @@
 import React from "react";
 
 const Header = () => (
-    <div className="version-3-logo shadow">
+    <div className="version-3-logo sticky-nav shadow">
       <div className="container">
         <div className="row d-flex justify-content-center">
           <div className="col-xs-12">
@@ -16,6 +16,8 @@ const Header = () => (
         </div>
       </div>
     </div>
+
+    
 );
 
 export default Header;

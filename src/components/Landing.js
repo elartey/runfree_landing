@@ -26,7 +26,7 @@ class Landing extends React.Component {
           <div>
             <div className="item">
               <div className="img-fill">
-                <div className="info">
+                <div className="info" style={{paddingTop: "8rem"}}>
                   <div className="container">
                     <div className="row">
                       <div className="col slider-content-area text-left">

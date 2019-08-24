@@ -1965,7 +1965,7 @@ button.NextArrowbrand:hover {
 /* start version three logo area */
 
 .version-3-logo {
-    background: #e9ecef8c;
+    background: #f8f9fa;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
 }
@@ -3676,4 +3676,11 @@ blockquote {
     width: 49.5%;
     float: left;
     margin-bottom: 23px;
+}
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 6;
 }
