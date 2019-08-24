@@ -32,7 +32,7 @@ class Landing extends React.Component {
                       <div className="col slider-content-area text-left" style={{zIndex: 9}}>
                         <div className="v3 welcome-text">
                           <h1 className="font-weight-normal">
-                            Day Kare Ambulance
+                            Day Kare Ambulance Service
                             <br />
                           </h1>
                           <h2>Ambulance Rider Assurance Membership</h2> <br />
