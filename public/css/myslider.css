@@ -3,10 +3,10 @@
 .img-fill {
     width: 100%;
     display: block;
-    /* overflow: hidden; */
     position: relative;
     text-align: center;
     z-index: 4;
+    height: 100%;
 }
 
 .img-fill img {

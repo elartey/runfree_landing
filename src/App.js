@@ -12,6 +12,7 @@ const App = () => (
   <div>
     <Header />
     <Landing />
+    <div className="bg-image"></div>
   </div>
 );
 

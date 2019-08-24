@@ -24,8 +24,12 @@ html,
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background-image: url('img/px1.jpg');
+	/* background-image: url('img/runfree-bg.JPG');
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	filter: blur(6px);
+	-webkit-filter: blur(6px); */
 }
 
 /**

@@ -29,7 +29,7 @@ class Landing extends React.Component {
                 <div className="info" style={{paddingTop: "8rem"}}>
                   <div className="container">
                     <div className="row">
-                      <div className="col slider-content-area text-left">
+                      <div className="col slider-content-area text-left" style={{zIndex: 9}}>
                         <div className="v3 welcome-text">
                           <h1 className="font-weight-normal">
                             Day Kare Ambulance

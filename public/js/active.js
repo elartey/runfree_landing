@@ -38,7 +38,7 @@
                 paddingBottom: verticalyv2
             });
 
-            imageFillS.css('height', welcomeareaH);
+            // imageFillS.css('height', welcomeareaH);
             imageFillv2S.css('height', version2HomeH);
 
             // jquery stikcy menu script
