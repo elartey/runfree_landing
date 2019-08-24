@@ -39,8 +39,9 @@ const PrimaryApplicant = props => {
           <select
             name="applicant_gender"
             onChange={props.handleApplicantChange("applicant_gender")}
+            defaultValue={"Select gender"}
           >
-            <option value="" disabled selected>Select gender</option>
+            <option value="Select gender" disabled>Select gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>
@@ -126,8 +127,9 @@ const PrimaryApplicant = props => {
           <select
             name="spouse_gender"
             onChange={props.handleApplicantChange("spouse_gender")}
+            defaultValue={"Select gender"}
           >
-            <option value="" disabled selected>Select gender</option>
+            <option value="Select gender" disabled>Select gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>

@@ -122,7 +122,7 @@ const BasicDetailsForm = props => {
   };
 
   return (
-    <div className="col-sm-6 v3-homeform">
+    <div className="col v3-homeform">
       <div className="about-form">
         <div className="form-title text-center">
           <h2>Membership Application</h2>

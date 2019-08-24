@@ -24,14 +24,14 @@
                 verticalyF = ((welcomeareaH - v3homeFormH) / 2),
                 verticalyv2 = ((version2HomeH - version2sliderh) / 2);
 
-            welcomeTextS.css({
-                paddingTop: verticaly + menuH,
-                paddingBottom: verticaly + menuH
-            });
-            v3homeForm.css({
-                paddingTop: verticalyF + menuH,
-                paddingBottom: verticalyF
-            });
+            // welcomeTextS.css({
+            //     paddingTop: verticaly + menuH,
+            //     paddingBottom: verticaly + menuH
+            // });
+            // v3homeForm.css({
+            //     paddingTop: verticalyF + menuH,
+            //     paddingBottom: verticalyF
+            // });
 
             version2sliderS.css({
                 paddingTop: verticalyv2,

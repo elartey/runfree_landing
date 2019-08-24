@@ -73,20 +73,6 @@ html,
 	}
 }
 
-/**
- * Open the modal box
- */
-/* .modal-dialog:target {
-	opacity: 1;
-	display: block;
-	/* Background height, here is the math:
-	5vh × 2 + the bluring shadow's height (70px).
-  Better place into @media query.
-  Keeping here for CodePen demo */
-	height: calc(100vh + 10vh + 70px);
-
-	pointer-events: auto
-} */
 
 /* Prevent outline on opening modals within some browsers */
 /* .modal-dialog:target {outline: none} */
@@ -245,32 +231,6 @@ html .modal-dialog.no--bg:target ~ .wrapper {height:0}
 	}
 
 }
-
-/**
- * The close button
- */
-/* .modal-dialog .close {
-	box-sizing: content-box;
-	display: block;
-	position: absolute;
-	z-index: 10000;
-	top: .35em;
-	right: .9em;
-	width: 1.5em;
-	height: 1.5em;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	align-self: center;
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
-
-	/* No vendor prefix for FF: ugly in old versions */
-	-webkit-border-radius: 50%;
-	-khtml-border-radius: 50%;
-	border-radius: 50%
-} */
 
 
 /* .modal-dialog .close strong {

@@ -21,15 +21,15 @@ class Landing extends React.Component {
 
   render() {
     return (
-      <div style={{paddingTop: "3rem"}}>
+      <div style={{ paddingTop: "3rem" }}>
         <section className="home-area v3">
-          <div className="">
+          <div>
             <div className="item">
               <div className="img-fill">
                 <div className="info">
                   <div className="container">
                     <div className="row">
-                      <div className="col-sm-6 slider-content-area text-left">
+                      <div className="col slider-content-area text-left">
                         <div className="v3 welcome-text">
                           <h1 className="font-weight-normal">
                             Day Kare Ambulance
@@ -57,7 +57,7 @@ class Landing extends React.Component {
                           </Button>
                         </div>
                       </div>
-                        <BasicDetailsForm formData={this.state.formData} />
+                      <BasicDetailsForm formData={this.state.formData} />
                     </div>
                   </div>
                 </div>

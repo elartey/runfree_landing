@@ -76,10 +76,10 @@ class DependantForm extends React.Component {
               onChange={this.handleDependants(
                 `dependant_gender${this.props.formId}`
               )}
-              defaultValue=""
+              defaultValue={"Select gender"}
               style={{width: "104%"}}
             >
-              <option value="" disabled selected>Select gender</option>
+              <option value="Select gender" disabled>Select gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
