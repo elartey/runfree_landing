@@ -35,9 +35,9 @@ class Landing extends React.Component {
                             Day Kare Ambulance
                             <br />
                           </h1>
-                          <h2>A.R.A.M</h2> <br />
+                          <h2>Ambulance Rider Assurance Membership</h2> <br />
                           <h2>Health Care Solutions</h2>
-                          <h4 className="font-weight-light">
+                          <h4 className="font-weight-light pb-5">
                             I hereby apply for membership of my family in the
                             Day Kare Ambulance Subscription Program. I
                             understand that the enclosed annual fee will only
