@@ -3688,11 +3688,11 @@ blockquote {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	filter: blur(2px);
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
+	filter: blur(1px);
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
     height: 100%;
     z-index: -1;
     position: fixed;
