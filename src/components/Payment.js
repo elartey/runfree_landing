@@ -34,7 +34,7 @@ const Payments = props => {
           #8. Please enter the mobile money transaction id below. You can find this in the transaction SMS.{" "}
         </li>
       </ul>
-      <p className="pt-3" style={{ color: "black", textAlign: "left" }}>**Note: Please provide either a 3rd party name or BDM details. <br /> Failure to provide then mobile money transaction id will render registration incomplete.</p>
+      <p className="pt-3" style={{ color: "black", textAlign: "left" }}>**Note: Please provide either a 3rd reseller name or BDM details. <br /> Failure to provide then mobile money transaction id will render registration incomplete.</p>
       <div className="row">
         <div className="v2-about-input pt-4 col">
           <input
@@ -51,7 +51,7 @@ const Payments = props => {
             type="text"
             name="third_party_name"
             id="third_party_name"
-            placeholder="** 3rd Party Name"
+            placeholder="** 3rd Party Reseller"
             onChange={props.handlePaymentReference("third_party_name")}
           />
         </div>
